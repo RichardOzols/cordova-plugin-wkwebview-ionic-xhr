@@ -131,7 +131,7 @@ NS_ASSUME_NONNULL_BEGIN
 {
     NSURL *targetURL = nil;
 
-    if ([uri hasPrefix: @"file://"] || [uri hasPrefix: @"FILE://"])
+    if ([uri hasPrefix: @"file://"] || [uri hasPrefix: @"FILE://"] || [uri hasPrefix: @"http://localhost:8080/"])
     {
         targetURL = [NSURL URLWithString:uri];
     }

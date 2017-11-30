@@ -890,7 +890,7 @@
           interceptRemoteRequests = context.interceptRemoteRequests;
 
         if ("GET" === context.method && typeof context.url === "string" &&
-          ((context.url.indexOf("://") === -1 && window.location.protocol === "file:") ||
+          ( (context.url.toLowerCase().startsWith("http://localhost:8080")) || (context.url.indexOf("://") === -1 && window.location.protocol === "file:") ||
            (context.url.toLowerCase().startsWith("file://"))))
         {
           resolve(new FileHandler(context, config));
