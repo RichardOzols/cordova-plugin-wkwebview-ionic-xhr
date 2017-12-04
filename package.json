@@ -1,16 +1,16 @@
 {
-  "name": "cordova-plugin-wkwebview-file-xhr",
+  "name": "cordova-plugin-wkwebview-ionic-xhr",
   "version": "2.1.1",
-  "description": "Cordova WKWebView File XHR Plugin",
+  "description": "Cordova WKWebView Ionic XHR Plugin",
   "cordova": {
-    "id": "cordova-plugin-wkwebview-file-xhr",
+    "id": "cordova-plugin-wkwebview-ionic-xhr",
     "platforms": [
       "ios"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sortdinc/cordova-plugin-wkwebview-file-xhr"
+    "url": "https://github.com/sortdinc/cordova-plugin-wkwebview-ionic-xhr"
   },
   "keywords": [
     "cordova",

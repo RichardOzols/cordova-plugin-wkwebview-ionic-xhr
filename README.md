@@ -1,19 +1,19 @@
-# cordova-plugin-wkwebview-file-xhr 2.1.0
+# cordova-plugin-wkwebview-ionic-xhr 2.1.1
 
-## About the cordova-plugin-wkwebview-file-xhr
+## About the cordova-plugin-wkwebview-ionic-xhr
 
-This plugin makes it possible to reap the performance benefits of using the WKWebView in your Cordova app by resolving the following issues:
+This plugin makes it possible to reap the performance benefits of using the new `Ionic` WKWebView in your Cordova app by resolving the following issues:
 
-* The default behavior of WKWebView is to raise a cross origin exception when loading files from the main bundle using the file protocol - "file://".  This plugin works around this shortcoming by loading files via native code if the web view's current location has "file" protocol and the target URL passed to the open method of the XMLHttpRequest is relative. As a security measure, the plugin verifies that the standardized path of the target URL is within the "www" folder of the application's main bundle.
+* The default behavior of WKWebView is to raise a cross origin exception when loading files from the main bundle using the file protocol - "file://". The Oracle `cordova-plugin-wkwebview-file-xhr` plugin and `cordova-plugin-ionic-webview` plugin try to fix these issues in various ways. Unfortunately Ionic insists on installing `cordova-plugin-ionic-webview` and Oracle's `cordova-plugin-wkwebview-file-xhr` insists on installing the standard Cordova WKWebView plugin  `cordova-plugin-ionic-webview`, which are mutually exclusive and cannot be run side by side. The `cordova-plugin-ionic-webview` plugin has many fixes necessary for Ionic Apps, but it doesn't fix the issue whereby the iOS WKWebView does not allow for cookies to be used via XHR requests. Oracle's `cordova-plugin-wkwebview-file-xhr` plugin does seem to fix this issue and hence this Fork attempts to bring together the best of both these worlds.
 
-* Since the application's starting page is loaded from the device's file system, all XHR requests to remote endpoints are considered cross origin.  For such requests, WKWebView specifies "null" as the value of the Origin header, which will be rejected by endpoints that are configured to disallow requests from the null origin. This plugin works around that issue by handling all remote requests at the native layer where the origin header will be excluded.
+* For more information see `https://github.com/oracle/cordova-plugin-wkwebview-file-xhr` and `https://ionicframework.com/docs/wkwebview/`
 
 ## Installation
 
-Plugin installation requires Cordova 4+ and iOS 9+. It will install the Apache Cordova WKWebView plugin `cordova-plugin-wkwebview-engine`.
+Plugin installation requires Cordova 4+ and iOS 9+. It will install the Ionic Cordova WKWebView plugin  `cordova-plugin-ionic-webview` if not already installed. Note that the `cordova-plugin-wkwebview-engine` and `cordova-plugin-ionic-webview` cannot both be loaded at the same time.
 
 ```
-cordova plugin add cordova-plugin-wkwebview-file-xhr
+cordova plugin add cordova-plugin-wkwebview-ionic-xhr
 ```
 
 ## Supported Platforms
@@ -56,7 +56,7 @@ config.xml as preferences:
 
 <ul>
  <li>AllowUntrustedCerts: on|off (default: off).  If "on", requests routed to the native implementation will accept self signed SSL certificates. This preference should only be enabled for testing purposes.</li>
- <li>InterceptRemoteRequests: all|secureOnly|none (default: secureOnly). Controls what types of remote XHR requests are intercepted and handled by the plugin. The plugin always intercepts requests with the file:// protocol. By default, the plugin will intercept only secure protocol requests ("https").</li>
+ <li>InterceptRemoteRequests: all|secureOnly|none (default: secureOnly). Controls what types of remote XHR requests are intercepted and handled by the plugin. The plugin always intercepts requests with the file:// protocol and any requests to http://localhost:8080/. By default, the plugin will intercept only secure protocol requests ("https").</li>
  <li>NativeXHRLogging: none|full (default: none).  If "full" the javascript layer will produce logging of the XHR requests sent through the native to the javascript console.  Note:  natively routed XHR requests will not appear in the web inspector utility when "InterceptRemoteRequests" is "all" or "secureOnly".</li>
 </ul>
 
@@ -69,7 +69,7 @@ Whilst this plugin resolves the main issues preventing the use of the Apache Cor
 See [CHANGELOG](CHANGELOG.md).
 
 ### [Contributing](CONTRIBUTING.md)
-This is an open source project maintained by Oracle Corp. Pull Requests are currently not being accepted. See [CONTRIBUTING](CONTRIBUTING.md) for details.
+This is an open source project forked from `cordova-plugin-wkwebview-file-xhr` maintained by Oracle Corp. Pull Requests are currently not being accepted. See [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ### [License](LICENSE.md)
 Copyright (c) 2017 Oracle and/or its affiliates

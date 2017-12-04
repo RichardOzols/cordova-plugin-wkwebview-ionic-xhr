@@ -20,13 +20,13 @@
  -->
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    id="cordova-plugin-wkwebview-file-xhr"
+    id="cordova-plugin-wkwebview-ionic-xhr"
     version="2.1.1">
-    <name>Cordova WKWebView File XHR Plugin</name>
-    <description>This plugin includes the Apache Cordova WKWebView plugin and resolves the issues of loading resources from the application bundle's www folder and sending XHR requests to remote endpoints.</description>
+    <name>Cordova WKWebView Ionic XHR Plugin</name>
+    <description>This plugin includes the Ionic WKWebView plugin and resolves XHR Cross-Origin Resource Sharing (CORS) constraints.</description>
     <license>UPL 1.0</license> 
-    <keywords>cordova,wkwebview,webview</keywords>
-    <repo>https://alm.oraclecorp.com/uitech/#projects/uitech_cordova-plugins/scm/cordova-plugin-wkwebview-file-xhr.git</repo>
+    <keywords>cordova,wkwebview,webview,ionic</keywords>
+    <repo>https://github.com/sortdinc/cordova-plugin-wkwebview-ionic-xhr</repo>
     <dependency id="cordova-plugin-ionic-webview" />
     <engines>
       <engine name="cordova-ios" version=">=4.0.0" />
