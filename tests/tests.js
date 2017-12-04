@@ -672,7 +672,7 @@ exports.defineAutoTests = function ()
 
       var xhr = new XMLHttpRequest();
       xhr.addEventListener("loadend", loadend);
-      xhr.open("GET", "wkwebview-file-xhr-tests/customers.html");
+      xhr.open("GET", "wkwebview-ionic-xhr-tests/customers.html");
       xhr.send();
 
     });
@@ -691,7 +691,7 @@ exports.defineAutoTests = function ()
 
       var xhr = new XMLHttpRequest();
       xhr.addEventListener("loadend", loadend);
-      var uri = _resolveUri("../wkwebview-file-xhr-tests/customers.html");
+      var uri = _resolveUri("../wkwebview-ionic-xhr-tests/customers.html");
       xhr.open("GET", uri);
       xhr.send();
 
@@ -711,7 +711,7 @@ exports.defineAutoTests = function ()
 
       var xhr = new XMLHttpRequest();
       xhr.onloadend = loadend;
-      xhr.open("GET", "wkwebview-file-xhr-tests/customers.html");
+      xhr.open("GET", "wkwebview-ionic-xhr-tests/customers.html");
       xhr.send();
     });
 
@@ -729,7 +729,7 @@ exports.defineAutoTests = function ()
 
       var xhr = new XMLHttpRequest();
       xhr.onloadend = loadend;
-      xhr.open("GET", "wkwebview-file-xhr-tests/customers.html");
+      xhr.open("GET", "wkwebview-ionic-xhr-tests/customers.html");
       xhr.send();
     });
 
@@ -747,7 +747,7 @@ exports.defineAutoTests = function ()
 
       var xhr = new XMLHttpRequest();
       xhr.onloadend = loadend;
-      xhr.open("GET", "wkwebview-file-xhr-tests/customers.html");
+      xhr.open("GET", "wkwebview-ionic-xhr-tests/customers.html");
       xhr.responseType = "arraybuffer";
       xhr.send();
     });
@@ -766,7 +766,7 @@ exports.defineAutoTests = function ()
 
       var xhr = new XMLHttpRequest();
       xhr.onloadend = loadend;
-      xhr.open("GET", "wkwebview-file-xhr-tests/customers.html");
+      xhr.open("GET", "wkwebview-ionic-xhr-tests/customers.html");
       xhr.responseType = "blob";
       xhr.send();
     });
@@ -786,7 +786,7 @@ exports.defineAutoTests = function ()
 
       var xhr = new XMLHttpRequest();
       xhr.onloadend = loadend;
-      xhr.open("GET", "wkwebview-file-xhr-tests/customers.html");
+      xhr.open("GET", "wkwebview-ionic-xhr-tests/customers.html");
       xhr.responseType = "document";
       xhr.send();
     });
@@ -805,7 +805,7 @@ exports.defineAutoTests = function ()
 
       var xhr = new XMLHttpRequest();
       xhr.onloadend = loadend;
-      xhr.open("GET", "wkwebview-file-xhr-tests/customers.json");
+      xhr.open("GET", "wkwebview-ionic-xhr-tests/customers.json");
       xhr.responseType = "json";
       xhr.send();
     });

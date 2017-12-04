@@ -4,7 +4,7 @@ Our plugin uses the [Cordova Plugin Test Framework](https://github.com/apache/co
 ## Steps to Run
 + Clone the repository.  The tests project is a sub folder so we need to install the plugins from the local file system.
 ```
-    git clone http://git-wip-us.apache.org/repos/asf/cordova-plugin-test-framework.git
+    git clone https://github.com/apache/cordova-plugin-test-framework.git
 ```
 + Create a cordova project using the cordova CLI:
 ```
@@ -14,13 +14,13 @@ Our plugin uses the [Cordova Plugin Test Framework](https://github.com/apache/co
 ```
 + Install the test harness:
 ```
-    cordova plugin add http://git-wip-us.apache.org/repos/asf/cordova-plugin-test-framework.git
+    cordova plugin add https://github.com/apache/cordova-plugin-test-framework.git
 ```
 + Change the start page in "`test/config.xml`" with `<content src="cdvtests/index.html"/>`.
-+ Install "`cordova-plugin-wkwebview-file-xhr`" plugin and associated tests:
++ Install "`cordova-plugin-wkwebview-ionic-xhr`" plugin and associated tests:
 ```
-    cordova plugin add ../cordova-plugin-wkwebview-file-xhr
-    cordova plugin add ../cordova-plugin-wkwebview-file-xhr/tests
+    cordova plugin add ../cordova-plugin-wkwebview-ionic-xhr
+    cordova plugin add ../cordova-plugin-wkwebview-ionic-xhr/tests
 ```
 + Open the Xcode project "`test/platforms/ios/TestFileXhr.xcodeproj`" in the Xcode IDE and run.  Alternatively, use the cordova CLI:
 ```

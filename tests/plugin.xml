@@ -21,15 +21,15 @@
  -->
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    id="cordova-plugin-wkwebview-file-xhr-tests"
+    id="cordova-plugin-wkwebview-ionic-xhr-tests"
     version="1.0.0">
-  <name>Cordova WKWebView File XHR Plugin Tests</name>
+  <name>Cordova WKWebView Ionic XHR Plugin Tests</name>
   <license>UPL 1.0</license>
 
   <js-module src="tests.js" name="tests">
   </js-module>
 
-  <asset src="www/assets" target="wkwebview-file-xhr-tests"/>
+  <asset src="www/assets" target="wkwebview-ionic-xhr-tests"/>
   <config-file target="config.xml" parent="/*">
     <preference name="NativeXHRLogging" value="none"/>
     <preference name="AllowUntrustedCerts" value="on"/>
