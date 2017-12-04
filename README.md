@@ -4,7 +4,7 @@
 
 This plugin makes it possible to reap the performance benefits of using the new `Ionic` WKWebView in your Cordova app by resolving the following issues:
 
-* The default behavior of WKWebView is to raise a cross origin exception when loading files from the main bundle using the file protocol - "file://". The Oracle `cordova-plugin-wkwebview-file-xhr` plugin and `cordova-plugin-ionic-webview` plugin try to fix these issues in various ways. Unfortunately Ionic insists on installing `cordova-plugin-ionic-webview` and Oracle's `cordova-plugin-wkwebview-file-xhr` insists on installing the standard Cordova WKWebView plugin  `cordova-plugin-ionic-webview`, which are mutually exclusive and cannot be run side by side. The `cordova-plugin-ionic-webview` plugin has many fixes necessary for Ionic Apps, but it doesn't fix the issue whereby the iOS WKWebView does not allow for cookies to be used via XHR requests. Oracle's `cordova-plugin-wkwebview-file-xhr` plugin does seem to fix this issue and hence this Fork attempts to bring together the best of both these worlds.
+* The default behavior of WKWebView is to raise a cross origin exception when loading files from the main bundle using the file protocol - "file://". The Oracle `cordova-plugin-wkwebview-file-xhr` plugin and `cordova-plugin-ionic-webview` plugin try to fix these issues in various ways. Unfortunately Ionic insists on installing `cordova-plugin-ionic-webview` and Oracle's `cordova-plugin-wkwebview-file-xhr` insists on installing the standard Cordova WKWebView plugin  `cordova-plugin-wkwebview-engine`, which are mutually exclusive and cannot be run side by side. The `cordova-plugin-ionic-webview` plugin has many fixes necessary for Ionic Apps, but it doesn't fix the issue whereby the iOS WKWebView does not allow for cookies to be used via XHR requests. Oracle's `cordova-plugin-wkwebview-file-xhr` plugin does seem to fix this issue and hence this Fork attempts to bring together the best of both these worlds.
 
 * For more information see `https://github.com/oracle/cordova-plugin-wkwebview-file-xhr` and `https://ionicframework.com/docs/wkwebview/`
 
@@ -74,3 +74,6 @@ This is an open source project forked from `cordova-plugin-wkwebview-file-xhr` m
 ### [License](LICENSE.md)
 Copyright (c) 2017 Oracle and/or its affiliates
 The Universal Permissive License (UPL), Version 1.0
+
+Amendments Copyright (c) 2017 Sortd, Inc and/or its affiliates
+The Universal Permissive License (UPL), Version 1.0*
