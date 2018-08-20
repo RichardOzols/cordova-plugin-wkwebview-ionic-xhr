@@ -30,6 +30,7 @@ xhr.addEventListener("loadend", function(evt)
    var data = this.responseText;
    document.getElementById("myregion").innerHtml = data;
  });
+
 xhr.open("GET", "js/views/customers.html");
 xhr.send();
 
@@ -72,6 +73,7 @@ See [CHANGELOG](CHANGELOG.md).
 This is an open source project forked from `cordova-plugin-wkwebview-file-xhr` maintained by Oracle Corp. Pull Requests are currently not being accepted. See [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ### [License](LICENSE.md)
+Copyright (c) 2018 Oracle and/or its affiliates
 The Universal Permissive License (UPL), Version 1.0
 
 Amendments Copyright (c) 2017 Sortd, Inc and/or its affiliates
