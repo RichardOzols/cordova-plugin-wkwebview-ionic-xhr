@@ -16,7 +16,8 @@
     "cordova",
     "wkwebview",
     "ecosystem:cordova",
-    "cordova-ios"
+    "cordova-ios",
+    "ionic"
   ],
   "scripts": {
     "test": "npm run jshint",
