@@ -22,9 +22,9 @@ cordova plugin add cordova-plugin-wkwebview-ionic-xhr
 
 ## Quick Example
 
-```
+```javascript
 // read local resource
-var xhr = XMLHttpRequest();
+var xhr = new XMLHttpRequest();
 xhr.addEventListener("loadend", function(evt)
  {
    var data = this.responseText;
@@ -41,12 +41,12 @@ xhr.addEventListener("loadend", function(evt)
    document.getElementById("productId").value = product.id;
    document.getElementById("productName").value = product.name;
  });
+
 xhr.open("POST", "https://myremote/endpoint/product");
 xhr.responseType = "json";
 xhr.setRequestHeader("Content-Type", "application/json");
 xhr.setRequestHeader("Accept", "application/json");
 xhr.send(JSON.stringify({name: "Product 99"}));
-
 ```
 
 ## Configuration
@@ -72,7 +72,6 @@ See [CHANGELOG](CHANGELOG.md).
 This is an open source project forked from `cordova-plugin-wkwebview-file-xhr` maintained by Oracle Corp. Pull Requests are currently not being accepted. See [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ### [License](LICENSE.md)
-Copyright (c) 2017 Oracle and/or its affiliates
 The Universal Permissive License (UPL), Version 1.0
 
 Amendments Copyright (c) 2017 Sortd, Inc and/or its affiliates

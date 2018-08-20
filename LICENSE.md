@@ -17,7 +17,7 @@ limitations under the License.
 
 
 ```
-Copyright (c) 2017 Oracle and/or its affiliates
+Copyright (c) 2018 Oracle and/or its affiliates
 The Universal Permissive License (UPL), Version 1.0
 Amendments from cordova-plugin-wkwebview-file-xhr Copyright (c) 2017 Sortd, Inc and/or its affiliates
 The Universal Permissive License (UPL), Version 1.0

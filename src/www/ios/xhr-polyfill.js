@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016 Oracle and/or its affiliates.
+ * Copyright (c) 2018 Oracle and/or its affiliates.
  *
  * The Universal Permissive License (UPL), Version 1.0
  *
@@ -1109,7 +1109,9 @@
 
   window.XMLHttpRequest.prototype.setRequestHeader = function (header, value)
   {
-    header = header.toLowerCase();
+    // normalize value pair to strings
+    header = String(header).toLowerCase();;
+    value = String(value);
     this._context.requestHeaders[header] = value;
   };
 
